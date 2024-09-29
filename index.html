@@ -1,0 +1,276 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eagles Healthcare Facilities - Leading supplier of medical equipment in Dar es Salaam.">
+    <meta name="keywords" content="medical equipment, healthcare, hospital facilities, medical supplies">
+    <meta name="author" content="Eagles Healthcare Facilities">
+    <title>Eagles Healthcare Facilities</title>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header style="text-align:center; padding:20px; background-color:#0056b3; color:#fff;">
+        <h1>Welcome to Eagles Healthcare Facilities</h1>
+        <p>Your trusted partner in supplying medical equipment</p>
+    </header>
+
+    <!-- Logo Section -->
+    <section class="logo" style="text-align:center; margin-top:20px;">
+        <img src="<?php echo base_url('assets/images/eagle-healthcare-logo.jpg'); ?>" alt="Eagles Healthcare Facilities Logo" style="max-width:300px;">
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" style="padding:20px; margin:20px;">
+        <h2>Overview of Eagles Healthcare Facilities</h2>
+        <p>
+            Eagles Healthcare Facilities is a leading provider of high-quality medical equipment based in Dar es Salaam. 
+            We are dedicated to supporting healthcare providers by supplying a wide range of medical equipment essential for hospitals and medical treatment centers.
+        </p>
+    </section>
+
+    <!-- Core Services Section with Facility Photos -->
+    <section id="services" style="padding:20px; margin:20px;">
+        <h2>Core Services</h2>
+        <ul>
+            <li><strong>Medical Equipment Supply</strong>: We offer a wide variety of advanced medical equipment for hospitals and healthcare institutions.</li>
+            <li><strong>Hospital Facilities</strong>: Our range covers essential hospital infrastructure, ensuring top-notch medical treatment capabilities.</li>
+        </ul>
+
+        <!-- Hospital Facilities Photos -->
+        <div class="facilities" style="text-align:center;">
+            <img src="<?php echo base_url('assets/images/hospital-facilities-placeholder.jpg'); ?>" alt="Hospital Facilities Image" style="max-width:100%; height:auto; border-radius:8px;">
+            <!-- Replace 'hospital-facilities-placeholder.jpg' with your actual image -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding:20px; margin:20px;">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> 0712 152356</p>
+        <p><strong>Email:</strong> <a href="mailto:mzitta222@gmail.com">mzitta222@gmail.com</a></p>
+        <p><strong>Location:</strong> Dar es Salaam, Tanzania</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background-color:#333; color:white; text-align:center; padding:10px; position:fixed; width:100%; bottom:0;">
+        <p>&copy; 2024 Eagles Healthcare Facilities | All Rights Reserved | Licensed Medical Supplier</p>
+    </footer>
+
+</body>
+</html>
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+// Structure to represent a medical equipment item
+struct Equipment {
+    int id;
+    string name;
+    int quantity;
+    double price;
+};
+
+// Function prototypes
+void displayMenu();
+void addEquipment(vector<Equipment>& inventory);
+void displayInventory(const vector<Equipment>& inventory);
+void updateEquipment(vector<Equipment>& inventory); 
+
+int main() {
+    vector<Equipment> inventory;  // Vector to store the equipment inventory
+    int choice
+    do {
+        displayMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addEquipment(inventory);
+                break;
+            case 2:
+                displayInventory(inventory);
+                break;
+            case 3:
+                updateEquipment(inventory);
+                break;
+            case 4:
+                cout << "Exiting the program..." << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please select again." << endl;
+                break;
+        }
+
+    } while (choice != 4);
+
+    return 0;
+}
+
+// Function to display the main menu
+void displayMenu() {
+    cout << "\n--- Eagles Healthcare Services Inventory Management ---" << endl;
+    cout << "1. Add new medical equipment" << endl;
+    cout << "2. Display equipment inventory" << endl;
+    cout << "3. Update equipment quantity" << endl;
+    cout << "4. Exit" << endl;
+    cout << "Enter your choice: ";
+}
+
+// Function to add a new piece of medical equipment to the inventory
+void addEquipment(vector<Equipment>& inventory) {
+    Equipment newEquipment;
+    cout << "\nEnter Equipment ID: ";
+    cin >> newEquipment.id;
+    cout << "Enter Equipment Name: ";
+    cin.ignore();
+    getline(cin, newEquipment.name);
+    cout << "Enter Quantity: ";
+    cin >> newEquipment.quantity;
+    cout << "Enter Price per unit: ";
+    cin >> newEquipment.price;
+
+    inventory.push_back(newEquipment);
+    cout << "\nEquipment added successfully!" << endl;
+}
+
+// Function to display the current inventory of equipment
+void displayInventory(const vector<Equipment>& inventory) {
+    if (inventory.empty()) {
+        cout << "\nInventory is empty!" << endl;
+        return;
+    }
+
+    cout << "\n--- Equipment Inventory ---" << endl;
+    for (const auto& equipment : inventory) {
+        cout << "ID: " << equipment.id
+             << ", Name: " << equipment.name
+             << ", Quantity: " << equipment.quantity
+             << ", Price: $" << equ
+<html/>#include <iostream>
+    #include <vector>
+    #include <string>
+    
+    using namespace std;
+    
+    // Structure to represent a medical equipment item
+    struct Equipment {
+        int id;
+        string name;
+        int quantity;
+        double price;
+    };
+    
+    // Function prototypes
+    void displayMenu();
+    void addEquipment(vector<Equipment>& inventory);
+    void displayInventory(const vector<Equipment>& inventory);
+    void updateEquipment(vector<Equipment>& inventory);
+    
+    int main() {
+        vector<Equipment> inventory;  // Vector to store the equipment inventory
+        int choice;
+    
+        do {
+            displayMenu();
+            cin >> choice;
+    
+            switch (choice) {
+                case 1:
+                    addEquipment(inventory);
+                    break;
+                case 2:
+                    displayInventory(inventory);
+                    break;
+                case 3:
+                    updateEquipment(inventory);
+                    break;
+                case 4:
+                    cout << "Exiting the program..." << endl;
+                    break;
+                default:
+                    cout << "Invalid choice. Please select again." << endl;
+                    break;
+            }
+    
+        } while (choice != 4);
+    
+        return 0;
+    }
+    
+    // Function to display the main menu
+    void displayMenu() {
+        cout << "\n--- Eagles Healthcare Services Inventory Management ---" << endl;
+        cout << "1. Add new medical equipment" << endl;
+        cout << "2. Display equipment inventory" << endl;
+        cout << "3. Update equipment quantity" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter your choice: ";
+    }
+    
+    // Function to add a new piece of medical equipment to the inventory
+    void addEquipment(vector<Equipment>& inventory) {
+        Equipment newEquipment;
+        cout << "\nEnter Equipment ID: ";
+        cin >> newEquipment.id;
+        cout << "Enter Equipment Name: ";
+        cin.ignore();
+        getline(cin, newEquipment.name);
+        cout << "Enter Quantity: ";
+        cin >> newEquipment.quantity;
+        cout << "Enter Price per unit: ";
+        cin >> newEquipment.price;
+    
+        inventory.push_back(newEquipment);
+        cout << "\nEquipment added successfully!" << endl;
+    }
+    
+    // Function to display the current inventory of equipment
+    void displayInventory(const vector<Equipment>& inventory) {
+        if (inventory.empty()) {
+            cout << "\nInventory is empty!" << endl;
+            return;
+        }
+    
+        cout << "\n--- Equipment Inventory ---" << endl;
+        for (const auto& equipment : inventory) {
+            cout << "ID: " << equipment.id
+                 << ", Name: " << equipment.name
+                 << ", Quantity: " << equipment.quantity
+                 << ", Price: $" << equipment.price << endl;
+        }
+    }
+    
+    // Function to update the quantity of existing equipment
+    void updateEquipment(vector<Equipment>& inventory) {
+        if (inventory.empty()) {
+            cout << "\nInventory is empty!" << endl;
+            return;
+        }
+    
+        int id, newQuantity;
+        cout << "\nEnter Equipment ID to update: ";
+        cin >> id;
+    
+        bool found = false;
+        for (auto& equipment : inventory) {
+            if (equipment.id == id) {
+                cout << "Enter new quantity for " << equipment.name << ": ";
+                cin >> newQuantity;
+                equipment.quantity = newQuantity;
+                cout << "Quantity updated successfully!" << endl;
+                found = true;
+                break;
+            }
+        }
+    
+        if (!found) {
+            cout << "Equipment with ID " << id << " not found!" << endl;
+        }
+    }
+    
